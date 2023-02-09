@@ -1,6 +1,6 @@
-connection: "aws_bi_prod"
+connection: "aws_rohlik_ml_postgres"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "/views/bags/*.view.lkml"                # include all views in the views/ folder in this project
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
@@ -18,3 +18,5 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
+
+explore: bag_prediction_log {}
